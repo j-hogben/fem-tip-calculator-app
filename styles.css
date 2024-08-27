@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Space Mono';
+  src: url(./assets/fonts/Space_Mono/SpaceMono-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url(./assets/fonts/Space_Mono/SpaceMono-Bold.ttf);
+  font-weight: 700;
+}
+
+/* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ CSS RESET ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
+
+/* 1. Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 3. Improve text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+}
+/* 4. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* 5. Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* 6. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ROOT STYLES ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
+
+:root {
+  /* COLOURS */
+  --clr-body: #c5e4e7;
+  --clr-white: #ffffff;
+  --clr-btn-dark: #00474b;
+  --clr-btn-vivid: #26c2ae;
+  --clr-input: #f3f9fa;
+  --clr-grid-input: #547878;
+  --clr-label: #5e7a7d;
+  --clr-results-pp: #7f9d9f;
+
+  /* FONT FAMILY */
+  --ff-body: 'Space Mono', sans-serif;
+
+  /* FONT SIZE */
+  --fs-result: 2rem; /* 32px */
+  --fs-input: 1.5rem; /* 24px */
+  --fs-btn-reset: 1.25rem; /* 20px */
+  --fs-body: 1rem; /* 16px */
+  --fs-person: 0.8125rem; /* 13px */
+
+  /* FONT WEIGHT */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* LINE HEIGHT */
+  --lh-body: 1.5;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+}
