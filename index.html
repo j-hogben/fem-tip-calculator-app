@@ -13,6 +13,7 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
+    <script src="./tip-calculator.js" defer></script>
 
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
@@ -23,7 +24,7 @@
       <!-- LEFT SIDE -->
       <section class="left-side-page">
         <!-- FORM -->
-        <form id="tip-calculator-form" action="">
+        <form id="tipCalculatorForm" action="">
           <!-- BILL AMOUNT FORM GROUP -->
           <div class="form-group">
             <label for="bill">Bill</label>
@@ -31,7 +32,7 @@
               <img src="./assets/images/icon-dollar.svg" alt="" />
               <input id="bill" type="text" inputmode="decimal" required />
             </div>
-            <div class="error-container"></div>
+            <div aria-live="polite" class="error"></div>
           </div>
 
           <div class="form-group">
@@ -91,14 +92,14 @@
 
               <label class="grid-item grid-item-text">
                 <input
+                  id="customTipAmount"
                   type="text"
                   inputmode="numeric"
-                  id=""
                   placeholder="Custom"
                 />
               </label>
             </div>
-            <div class="error-container"></div>
+            <div aria-live="polite" class="error"></div>
           </div>
 
           <!-- NUMBER OF PEOPLE FORM GROUP -->
@@ -106,10 +107,17 @@
             <label for="numOfPeople">Number of People</label>
             <div class="input-container">
               <img src="./assets/images/icon-person.svg" alt="" />
-              <input id="numOfPeople" type="text" inputmode="decimal" />
+              <input
+                id="numOfPeople"
+                type="text"
+                inputmode="decimal"
+                required
+              />
             </div>
-            <div class="error-container"></div>
+            <div aria-live="polite" class="error"></div>
           </div>
+
+          <button type="submit">SUBMIT</button>
         </form>
       </section>
 
