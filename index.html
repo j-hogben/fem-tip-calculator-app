@@ -18,125 +18,158 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
+    <h1 class="sr-only">Tip Calculator</h1>
     <img src="./assets/images/logo.svg" alt="splitter logo" class="logo" />
 
     <main>
-      <!-- LEFT SIDE -->
-      <section class="left-side-page">
-        <!-- FORM -->
-        <form id="tipCalculatorForm" action="">
-          <!-- BILL AMOUNT FORM GROUP -->
-          <div class="form-group">
-            <label for="bill">Bill</label>
-            <div class="input-container">
-              <img src="./assets/images/icon-dollar.svg" alt="" />
-              <input id="bill" type="text" inputmode="decimal" required />
-            </div>
-            <div aria-live="polite" class="error"></div>
-          </div>
-
-          <div class="form-group">
-            <p>Select Tip %</p>
-            <!-- TIPS GRID -->
-            <div class="tips-grid">
-              <!-- GRID ITEMS -->
-              <label class="grid-item grid-item-radio">
-                <p>5%</p>
-                <input
-                  type="radio"
-                  name="tipAmount"
-                  id="5PercentTip"
-                  value="5"
+      <article class="calculator-container">
+        <!-- LEFT SIDE -->
+        <section class="left-side-page">
+          <!-- FORM -->
+          <form id="tipCalculatorForm" action="">
+            <!-- BILL AMOUNT FORM GROUP -->
+            <div class="form-group">
+              <div class="label-error-container">
+                <label class="label-sm" for="bill">Bill</label>
+                <div aria-live="polite" class="error"></div>
+              </div>
+              <div class="input-container pointer">
+                <img
+                  class="input-image"
+                  src="./assets/images/icon-dollar.svg"
+                  alt=""
                 />
-              </label>
-
-              <label class="grid-item grid-item-radio">
-                <p>10%</p>
                 <input
-                  type="radio"
-                  name="tipAmount"
-                  id="10PercentTip"
-                  value="10"
-                />
-              </label>
-
-              <label class="grid-item grid-item-radio">
-                <p>15%</p>
-                <input
-                  type="radio"
-                  name="tipAmount"
-                  id="15PercentTip"
-                  value="15"
-                />
-              </label>
-
-              <label class="grid-item grid-item-radio">
-                <p>25%</p>
-                <input
-                  type="radio"
-                  name="tipAmount"
-                  id="25PercentTip"
-                  value="25"
-                />
-              </label>
-
-              <label class="grid-item grid-item-radio">
-                <p>50%</p>
-                <input
-                  type="radio"
-                  name="tipAmount"
-                  id="50PercentTip"
-                  value="50"
-                />
-              </label>
-
-              <label class="grid-item grid-item-text">
-                <input
-                  id="customTipAmount"
+                  id="bill"
+                  class="pointer"
                   type="text"
-                  inputmode="numeric"
-                  placeholder="Custom"
+                  inputmode="decimal"
+                  placeholder="0"
+                  autocomplete="off"
+                  required
                 />
-              </label>
+              </div>
             </div>
-            <div aria-live="polite" class="error"></div>
-          </div>
-
-          <!-- NUMBER OF PEOPLE FORM GROUP -->
-          <div class="form-group">
-            <label for="numOfPeople">Number of People</label>
-            <div class="input-container">
-              <img src="./assets/images/icon-person.svg" alt="" />
-              <input
-                id="numOfPeople"
-                type="text"
-                inputmode="decimal"
-                required
-              />
+            <div class="form-group">
+              <p class="label-sm">Select Tip %</p>
+              <!-- TIPS GRID -->
+              <div class="tips-grid">
+                <!-- GRID ITEMS -->
+                <label class="grid-item grid-item-radio pointer">
+                  <p>5%</p>
+                  <input
+                    id="5PercentTip"
+                    class="sr-only static-amount-value"
+                    type="radio"
+                    name="tipAmount"
+                    value="5"
+                  />
+                </label>
+                <label class="grid-item grid-item-radio pointer">
+                  <p>10%</p>
+                  <input
+                    id="10PercentTip"
+                    class="sr-only static-amount-value"
+                    type="radio"
+                    name="tipAmount"
+                    value="10"
+                  />
+                </label>
+                <label class="grid-item grid-item-radio pointer">
+                  <p>15%</p>
+                  <input
+                    id="15PercentTip"
+                    class="sr-only static-amount-value"
+                    type="radio"
+                    name="tipAmount"
+                    value="15"
+                  />
+                </label>
+                <label class="grid-item grid-item-radio pointer">
+                  <p>25%</p>
+                  <input
+                    id="25PercentTip"
+                    class="sr-only static-amount-value"
+                    type="radio"
+                    name="tipAmount"
+                    value="25"
+                  />
+                </label>
+                <label class="grid-item grid-item-radio pointer">
+                  <p>50%</p>
+                  <input
+                    id="50PercentTip"
+                    class="sr-only static-amount-value"
+                    type="radio"
+                    name="tipAmount"
+                    value="50"
+                  />
+                </label>
+                <label class="grid-item grid-item-text pointer">
+                  <input
+                    id="customTipRadio"
+                    class="sr-only"
+                    type="radio"
+                    name="tipAmount"
+                    value=""
+                  />
+                  <p class="custom-tip-label">Custom</p>
+                  <input
+                    id="customTipAmount"
+                    class="pointer"
+                    type="text"
+                    inputmode="numeric"
+                    placeholder="0"
+                    autocomplete="off"
+                  />
+                </label>
+              </div>
+              <div aria-live="polite" class="error"></div>
             </div>
-            <div aria-live="polite" class="error"></div>
+            <!-- NUMBER OF PEOPLE FORM GROUP -->
+            <div class="form-group">
+              <div class="label-error-container">
+                <label class="label-sm" for="numOfPeople"
+                  >Number of People</label
+                >
+                <div aria-live="polite" class="error"></div>
+              </div>
+              <div class="input-container pointer">
+                <img
+                  class="input-image"
+                  src="./assets/images/icon-person.svg"
+                  alt=""
+                />
+                <input
+                  id="numOfPeople"
+                  class="pointer"
+                  type="text"
+                  inputmode="decimal"
+                  placeholder="0"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+          </form>
+        </section>
+        <!-- RIGHT SIDE -->
+        <section class="right-side-page">
+          <div class="results-grid-container">
+            <div class="tip-amount">
+              <p class="tip-description">Tip Amount</p>
+              <p class="per-person">/ person</p>
+            </div>
+            <p id="tip-amount-result">$4.27</p>
+            <div class="total-amount">
+              <p class="total-description">Total</p>
+              <p class="per-person">/ person</p>
+            </div>
+            <p id="total-amount-result">$32.79</p>
           </div>
-
-          <button type="submit">SUBMIT</button>
-        </form>
-      </section>
-
-      <!-- RIGHT SIDE -->
-      <section class="right-side-page">
-        <div class="results-grid-container">
-          <div class="tip-amount">
-            <p class="tip-description">Tip Amount</p>
-            <p class="tip-per-person">/ person</p>
-          </div>
-          <p id="tip-amount-result"></p>
-          <div class="total-amount">
-            <p class="total-description">Total</p>
-            <p class="total-per-person">/ person</p>
-          </div>
-          <p id="total-amount-result"></p>
-        </div>
-        <button>RESET</button>
-      </section>
+          <button id="reset-btn" onclick="resetForm()">RESET</button>
+        </section>
+      </article>
     </main>
   </body>
 </html>
